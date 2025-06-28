@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read XML File</title>
+    <style>
+        body{
+            background-color: blue;
+            color: aliceblue;
+        }
+        
+        table,th,td {
+  border : 3px dotted red;
+}
+th,td {
+  padding: 5px;
+}
+h2{
+  color: orange;
+  text-align: center;
+}
+    </style>
+</head>
+
+<body>
+    <h2>聯絡人資訊</h2>
+    
+    <table id="contact"></table>
+<!-- read xml contact information -->
+    <script>
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    myFunction(this);
+  }
+  xhttp.open("GET", "contact.xml");
+  xhttp.send();
+}
+function myFunction(xml) {
+  const xmlDoc = xml.responseXML;
+  const x = xmlDoc.getElementsByTagName("INFO");
+  let table="<tr><th>姓名 :</th><th>電話 :</th><th>電郵地址 :</th></tr>";
+  for (let i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("TEL")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("EMAIL")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("contact").innerHTML = table;
+}
+
+loadDoc();
+    </script>
+    <!-- <script src="js/script.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>相片集</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+   
+    .grid-container {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr; /* 三個等寬列 */
+grid-gap: 2px; /* 網格項目之間的間隔 */
+}
+.grid-item {
+
+padding: 10px;
+text-align: center;
+opacity: 0.9;
+}
+.grid-item:hover{
+    opacity: 1.0;
+    border: 1px dotted red;
+}
+
+img{
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.lightbox1 {
+display: none;
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.8);
+text-align: center;
+padding-top: 5%;
+z-index: 1;
+}
+
+.lightbox1 img {
+max-width: 90%;
+max-height: 80%;
+box-shadow: 0 0 20px #fff;
+}
+
+.lightbox1:target {
+display: block;
+}
+.lightbox2 {
+display: none;
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.8);
+text-align: center;
+padding-top: 5%;
+z-index: 1;
+}
+
+.lightbox2 img {
+max-width: 90%;
+max-height: 80%;
+box-shadow: 0 0 20px #fff;
+}
+
+.lightbox2:target {
+display: block;
+}
+.lightbox3 {
+display: none;
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.8);
+text-align: center;
+padding-top: 5%;
+z-index: 1;
+}
+
+.lightbox3 img {
+max-width: 90%;
+max-height: 80%;
+box-shadow: 0 0 20px #fff;
+
+}
+
+.lightbox3:target {
+display: block;
+}
+.lightbox4 {
+display: none;
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.8);
+text-align: center;
+padding-top: 5%;
+z-index: 1;
+}
+
+.lightbox4 img {
+max-width: 90%;
+max-height: 80%;
+box-shadow: 0 0 20px #fff;
+
+}
+
+.lightbox4:target {
+display: block;
+}
+
+.lightbox5 {
+display: none;
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.8);
+text-align: center;
+padding-top: 5%;
+z-index: 1;
+}
+
+.lightbox5 img {
+max-width: 90%;
+max-height: 80%;
+box-shadow: 0 0 20px #fff;
+
+}
+
+.lightbox5:target {
+display: block;
+}
+
+.lightbox6 {
+display: none;
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.8);
+text-align: center;
+padding-top: 5%;
+z-index: 1;
+}
+
+.lightbox6 img {
+max-width: 90%;
+max-height: 80%;
+box-shadow: 0 0 20px #fff;
+
+}
+
+.lightbox6:target {
+display: block;
+}
+
+.lightbox7 {
+display: none;
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.8);
+text-align: center;
+padding-top: 5%;
+z-index: 1;
+}
+
+.lightbox7 img {
+max-width: 90%;
+max-height: 80%;
+box-shadow: 0 0 20px #fff;
+
+}
+
+.lightbox7:target {
+display: block;
+}
+
+.lightbox8 {
+display: none;
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.8);
+text-align: center;
+padding-top: 5%;
+z-index: 1;
+}
+
+.lightbox8 img {
+max-width: 90%;
+max-height: 80%;
+box-shadow: 0 0 20px #fff;
+
+}
+
+.lightbox8:target {
+display: block;
+}
+
+.lightbox9 {
+display: none;
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.8);
+text-align: center;
+padding-top: 5%;
+z-index: 1;
+}
+
+.lightbox9 img {
+max-width: 90%;
+max-height: 80%;
+box-shadow: 0 0 20px #fff;
+
+}
+
+.lightbox9:target {
+display: block;
+}
+
+.lightbox10 {
+display: none;
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.8);
+text-align: center;
+padding-top: 5%;
+z-index: 1;
+}
+
+.lightbox10 img {
+max-width: 90%;
+max-height: 80%;
+box-shadow: 0 0 20px #fff;
+
+}
+
+.lightbox10:target {
+display: block;
+}
+
+.lightbox11 {
+display: none;
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.8);
+text-align: center;
+padding-top: 5%;
+z-index: 1;
+}
+
+.lightbox11 img {
+max-width: 90%;
+max-height: 80%;
+box-shadow: 0 0 20px #fff;
+
+}
+
+.lightbox11:target {
+display: block;
+}
+
+.lightbox12 {
+display: none;
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.8);
+text-align: center;
+padding-top: 5%;
+z-index: 1;
+}
+
+.lightbox12 img {
+max-width: 90%;
+max-height: 80%;
+box-shadow: 0 0 20px #fff;
+
+}
+
+.lightbox12:target {
+display: block;
+}
+.close {
+position: absolute;
+bottom:  300px; right: 10%;
+font-size: 40px;
+color: white;
+text-decoration: none;
+z-index: 1;
+}
+  </style>
+</head>
+<body>
+<header>
+  <h1>行山樂園</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">主頁</a></li>
+      <li><a href="about.html">關於我們</a></li>
+      <li><a href="trails.html">行山路線</a></li>
+      <li><a href="gallery.html">相片集</a></li>
+      <li><a href="videos.html">影片</a></li>
+      <li><a href="tips.html">行山小貼士</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  
+<h2>相片集</h2>
+
+ <div class="grid-container">
+
+<div class="grid-item">
+    <a href="#lightbox1"><img src="image/photos/1.jpg" width="100%" alt="山頂風景"/></a>
+    <!-- lightbox 1 -->
+     <div id="lightbox1" class="lightbox1">
+       <a href="#" class="close">&times;</a>
+       <img src="image/photos/1.jpg" alt="大圖">
+     </div>
+    <h4>往大潭中水塘</h4>
+</div>
+
+<div class="grid-item">
+    <a href="#lightbox2"><img src="image/photos/2.jpg" width="100%" alt="山路小徑"/></a>
+    <!-- lightbox 2 -->
+    <div id="lightbox2" class="lightbox2">
+        <a href="#" class="close">&times;</a>
+        <img src="image/photos/2.jpg" alt="大圖">
+      </div>
+    <h4>大潭中水塘堤壩</h4>
+</div>
+
+<div class="grid-item">
+    <a href="#lightbox3"><img src="image/photos/3.jpg" width="100%" alt="遠足隊伍"/></a>
+    <!-- lightbox 3 -->
+    <div id="lightbox3" class="lightbox3">
+        <a href="#" class="close">&times;</a>
+        <img src="image/photos/3.jpg" alt="大圖">
+      </div>
+    <h4>林蔭森密</h4>
+</div>
+<div class="grid-item">
+    <a href="#lightbox4"><img src="image/photos/4.jpg" width="100%" alt="山頂風景"/></a>
+    <!-- lightbox 4 -->
+    <div id="lightbox4" class="lightbox4">
+        <a href="#" class="close">&times;</a>
+        <img src="image/photos/4.jpg" alt="大圖">
+      </div>
+    <h4>鋪地蜈蚣</h4>
+</div>
+<div class="grid-item">
+    <a href="#lightbox5"><img src="image/photos/5.jpg" width="100%" alt="山路小徑"/></a>
+    <!-- lightbox 5 -->
+    <div id="lightbox5" class="lightbox5">
+      <a href="#" class="close">&times;</a>
+      <img src="image/photos/5.jpg" alt="大圖">
+    </div>
+    <h4>逃出生天</h4>
+</div>
+<div class="grid-item">
+    <a href="#lightbox6"><img src="image/photos/6.jpg" width="100%" alt="遠足隊伍"/></a>
+    <!-- lightbox 6 -->
+    <div id="lightbox6" class="lightbox6">
+      <a href="#" class="close">&times;</a>
+      <img src="image/photos/6.jpg" alt="大圖">
+    </div>
+    <h4>再鑽進竹林</h4>
+</div>
+<div class="grid-item">
+    <a href="#lightbox7"><img src="image/photos/7.jpg" width="100%" alt="山頂風景"/></a>
+    <!-- lightbox 7 -->
+    <div id="lightbox7" class="lightbox7">
+      <a href="#" class="close">&times;</a>
+      <img src="image/photos/7.jpg" alt="大圖">
+    </div>
+    <h4>紅磚標柱</h4>
+</div>
+<div class="grid-item">
+    <a href="#lightbox8"><img src="image/photos/8.jpg" width="100%" alt="山路小徑"/></a>
+     <!-- lightbox 8 -->
+     <div id="lightbox8" class="lightbox8">
+      <a href="#" class="close">&times;</a>
+      <img src="image/photos/8.jpg" alt="大圖">
+    </div>
+    <h4>東龍島</h4>
+</div>
+<div class="grid-item">
+    <a href="#lightbox9"><img src="image/photos/9.jpg" width="100%" alt="遠足隊伍"/></a>
+    <!-- lightbox 9 -->
+    <div id="lightbox9" class="lightbox9">
+      <a href="#" class="close">&times;</a>
+      <img src="image/photos/9.jpg" alt="大圖">
+    </div>
+    <h4>遠處為擔杆島</h4>
+</div>
+<div class="grid-item">
+    <a href="#lightbox10"><img src="image/photos/10.jpg" width="100%" alt="山頂風景"/></a>
+    <!-- lightbox 10 -->
+    <div id="lightbox10" class="lightbox10">
+      <a href="#" class="close">&times;</a>
+      <img src="image/photos/10.jpg" alt="大圖">
+    </div>
+    <h4>華山薑果實</h4>
+</div>
+<div class="grid-item">
+    <a href="#lightbox11"><img src="image/photos/11.jpg" width="100%" alt="山路小徑"/></a>
+     <!-- lightbox 11 -->
+     <div id="lightbox11" class="lightbox11">
+      <a href="#" class="close">&times;</a>
+      <img src="image/photos/11.jpg" alt="大圖">
+    </div>
+    <h4>穿門</h4>
+</div>
+<div class="grid-item">
+    <a href="#lightbox12"><img src="image/photos/12.jpg" width="100%" alt="遠足隊伍"/></a>
+    <!-- lightbox 12 -->
+    <div id="lightbox12" class="lightbox12">
+      <a href="#" class="close">&times;</a>
+      <img src="image/photos/12.jpg" alt="大圖">
+    </div>
+    <h4>近望東龍島</h4>
+</div>
+</div>
+
+</main>
+<footer>
+  <p id="_footer">© 2025 行山樂園. ERB 多媒體網頁設計及互動程式設計課程。</p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

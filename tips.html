@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>行山小貼士</title>
+  
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    iframe{
+      
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0,1);
+    transition: all 0.3s ease;
+
+    }
+    iframe:hover{
+      transform: scale(1.02);
+    }
+  </style>
+  
+</head>
+<body>
+<header>
+  <h1>行山樂園</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">主頁</a></li>
+      <li><a href="about.html">關於我們</a></li>
+      <li><a href="trails.html">行山路線</a></li>
+      <li><a href="gallery.html">相片集</a></li>
+      <li><a href="videos.html">影片</a></li>
+      <li><a href="tips.html">行山小貼士</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <h2>行山小貼士</h2><p style="color: red;background-color: yellow;">@@ 記得帶水、防曬、穿適合的鞋及注意天氣變化！</p>
+  <div class="container">
+    <h3>良好的裝備對遠足很重要，遠足前可因應個人需要及活動性質，攜帶以下裝備：</h3>
+    <h3>背囊 —</h3>
+<ul>
+<li>最輕的物品放下面，較重的中間，最重的放上面，後用先放，隨時用的放兩側，左右兩邊重量要相稱</li>
+<li>背囊的重量不要超過個人體重之三分一，最重則不可超過四十磅</li>
+</ul>
+<h3>裝備 —</h3>
+<ul>
+  <li>登山鞋 — 鞋頭要較闊，鞋底要有較深的坑紋.</li>
+  <li>襪子.</li>
+  <li>上衣 — 穿長袖和有領的防曬/速乾/透氣衫，可避免雙臂和頸後被陽光灼傷.</li>
+  <li>褲 — 鬆身防曬/速乾/透氣長褲為佳.</li>
+  <li>毛巾/冰巾/手臂套管.</li>
+  <li>外衣及防風衣/雨衣.</li>
+  <li>帽、太陽眼鏡、雨傘、手套.</li>
+  <li>後備衣物.</li>
+  <li>行山杖.</li>
+  <li>地圖(地政總署出版的郊區地圖)及指南針.</li>
+  <li>照明工具.</li>
+  <li>哨子.</li>
+  <li>食糧及緊急食糧 — 高熱量、輕便、易進食為主，如葡萄糖、提子乾、能量食物.</li>
+  <li>水樽及水 (郊野公園加水站).</li>
+  <li>個人藥品及急救用品.</li>
+  <li>防曬及防蚊用品.</li>
+  <li>無線電話及後備電池/充電器及充電線.</li>
+  <li>手錶.</li>
+</ul>
+<button  class="_list" onclick="_docHTML()">
+  裝備清單下載
+</button>
+   
+  </div>
+</main>
+<footer>
+  <p id="_footer">© 2025 行山樂園. ERB 多媒體網頁設計及互動程式設計課程。</p>
+</footer>
+<script>
+  function _docHTML(){
+    open('doc.html','_blank');
+  }
+
+</script>
+</body>
+</html>
